@@ -28,4 +28,18 @@ class Submarines:
         return count
 
     def count_submarines_better_way(self) -> int:
-        pass
+        count = 0
+        width = len(self.grid[0])
+        for i, row in enumerate(self.grid):
+            j = 0
+            while j < width:
+                if row[j] == SUBMARINE_SIGN and self.check_neighbours(i, j):
+                    """
+                    If we found a submarine - we don't need to check the neighbours of this point
+                    because we don't care if they 1 or zero - anyway we don't need add the counter.
+                    """
+                    count += 1
+                    j += 1
+                j += 1
+        return count
+
