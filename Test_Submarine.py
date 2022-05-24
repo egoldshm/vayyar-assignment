@@ -62,6 +62,18 @@ class TestSubmarinesCounter(unittest.TestCase):
     def test4_better_way(self):
         self.assertEqual(s4.count_submarines_better_way(), 2)
 
+    def test1_better_way2(self):
+        self.assertEqual(s1.count_submarines_better_way2(), 4)
+
+    def test2_better_way2(self):
+        self.assertEqual(s2.count_submarines_better_way2(), 6)
+
+    def test3_better_way2(self):
+        self.assertEqual(s3.count_submarines_better_way2(), 9)
+
+    def test4_better_way2(self):
+        self.assertEqual(s4.count_submarines_better_way2(), 2)
+
 
 if __name__ == '__main__':
     unittest.main()
