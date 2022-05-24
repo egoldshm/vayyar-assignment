@@ -53,7 +53,7 @@ class Submarines:
 
             while j < width:
                 # Row up was a submarine?
-                if i != 0 and old_submarines and old_submarines[0][0] <= j:
+                if old_submarines and old_submarines[0][0] <= j:
                     current_submarine = old_submarines.pop(0)
                     # It's also a submarine?
                     if row[j] == SUBMARINE_SIGN:
