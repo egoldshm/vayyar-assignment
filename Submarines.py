@@ -60,7 +60,7 @@ class Submarines:
                         # If it's a submarine - add this for the next row
                         submarines_in_row.append(current_submarine)
 
-                    # anyway - Jump to end of the submarine
+                    # Anyway - jump to end of the submarine
                     j = current_submarine[1]
 
                 # It's a submarine?
