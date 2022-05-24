@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Tuple
 
 SUBMARINE_SIGN = 1
 
@@ -46,10 +46,11 @@ class Submarines:
     def count_submarines_better_way2(self) -> int:
         count = 0
         width = len(self.grid[0])
-        old_submarines = []
+        old_submarines: List[List[int]] = []
         for i, row in enumerate(self.grid):
             j = 0
-            submarines_in_row = []
+            # Keep for every submarine that found in this row start point and end point
+            submarines_in_row: List[List[int]] = []
 
             while j < width:
                 # Row up was a submarine?
@@ -65,7 +66,7 @@ class Submarines:
 
                 # It's a submarine?
                 elif row[j] == SUBMARINE_SIGN:
-                    # it's a new submarine (by check if the left point is not a submarine too) ?
+                    # it's a new submarine? (by check if the left point is not a submarine too)
                     if 0 == j or row[j - 1] != SUBMARINE_SIGN:
                         count += 1
                         submarines_in_row.append([j])
