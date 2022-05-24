@@ -9,7 +9,7 @@ Three functions perform this:
 
 The program also has tests that check that the code is correct.
 
-# installation and use
+# installation and testing
 download the code:
 ```cmd
 git clone https://github.com/egoldshm/vayyar-assignment
